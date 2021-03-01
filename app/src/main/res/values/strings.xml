@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">FinalProject1</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test">TEST</string>
+    <string name="test2">test2</string>
+    <string name="juice">JUICE</string>
+    <string name="coffee_tea"><![CDATA[COFFEE & TEA]]></string>
+    <string name="juice_page">JUICE PAGE</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+
+
+    <string-array name="fruit_listName">
+        <item>Apple juice</item>
+        <item>Watermelon juice</item>
+        <item>Carrot juice</item>
+        <item>Mango juice</item>
+    </string-array>
+
+    <string-array name="fruit_listDesc">
+        <item>This is random description.</item>
+        <item>This is random description.</item>
+        <item>This is random description.</item>
+        <item>This is random description.</item>
+    </string-array>
+</resources>
