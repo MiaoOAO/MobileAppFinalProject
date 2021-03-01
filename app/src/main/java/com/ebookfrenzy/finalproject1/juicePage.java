@@ -44,6 +44,7 @@ public class juicePage extends AppCompatActivity {
         coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "5", "1"));
         //coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "6", "1"));
         //coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "6", "1"));
+        //coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "6", "1"));
 
 
 
