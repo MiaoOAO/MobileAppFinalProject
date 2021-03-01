@@ -81,7 +81,7 @@ public class Tab1Fragment extends Fragment {
         myButton2 = (ImageButton) view.findViewById(R.id.imageButton3);
         myButton2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(getActivity(), juicePage.class);
+                Intent intent = new Intent(getActivity(), coffeePage.class);
                 myButton2.setOnClickListener(this);
                 click2 = true;
                 startActivity(intent);

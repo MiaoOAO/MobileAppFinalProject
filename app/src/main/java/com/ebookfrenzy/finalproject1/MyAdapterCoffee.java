@@ -39,7 +39,7 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
             createTableOnFirstStart();
         }
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_row,
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.coffee_my_row,
                 parent, false);
         return new MyViewHolder(view);
     }
@@ -50,14 +50,14 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
 
         readCursorData(coffeeItem, holder);
 
-        holder.fruit_image.setImageResource(coffeeItem.getImageResourse());
-        holder.fruit_listName_txt.setText(coffeeItem.getTitle());
+        holder.coffee_image.setImageResource(coffeeItem.getImageResourse());
+        holder.coffee_listName_txt.setText(coffeeItem.getTitle());
         /*
         holder.fruit_listName_txt.setText(data1[position]);
         holder.fruit_listDesc_txt.setText(data2[position]);
         holder.fruit_image.setImageResource(images[position]);
 */
-        holder.fruit_cardView.setOnClickListener(new View.OnClickListener() {
+        holder.coffee_cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, juiceContent.class);
@@ -80,20 +80,20 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         //TextView fruit_listName_txt, fruit_listDesc_txt;
-        TextView fruit_listName_txt;
-        ImageView fruit_image;
-        CardView fruit_cardView;
-        Button fruit_favBtn;
+        TextView coffee_listName_txt;
+        ImageView coffee_image;
+        CardView coffee_cardView;
+        Button coffee_favBtn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            fruit_listName_txt = itemView.findViewById(R.id.fruit_listName_txt);
+            coffee_listName_txt = itemView.findViewById(R.id.coffee_listName_txt);
             //fruit_listDesc_txt = itemView.findViewById(R.id.fruit_listDesc_txt);
-            fruit_image = itemView.findViewById(R.id.fruit_image);
-            fruit_cardView = itemView.findViewById(R.id.fruit_cardView);
-            fruit_favBtn = itemView.findViewById(R.id.fruit_favor);
+            coffee_image = itemView.findViewById(R.id.coffee_image);
+            coffee_cardView = itemView.findViewById(R.id.coffee_cardView);
+            coffee_favBtn = itemView.findViewById(R.id.coffee_favor);
 
-            fruit_favBtn.setOnClickListener(new View.OnClickListener() {
+            coffee_favBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
@@ -103,11 +103,11 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
                         coffeeItem.setFavStatus("1");
                         favDB.insertIntoTheDatabase(coffeeItem.getTitle(), coffeeItem.getImageResourse(),
                                 coffeeItem.getKey_id(), coffeeItem.getFavStatus());
-                        fruit_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
+                        coffee_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
                     }else{
                         coffeeItem.setFavStatus("0");
                         favDB.remove_fav(coffeeItem.getKey_id());
-                        fruit_favBtn.setBackgroundResource(R.drawable.ic_baseline_star);
+                        coffee_favBtn.setBackgroundResource(R.drawable.ic_baseline_star);
                     }
                 }
             });
@@ -132,9 +132,9 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
                 coffeeItem.setFavStatus(item_fav_status);
 
                 if(item_fav_status != null && item_fav_status.equals("1")){
-                    myViewHolder.fruit_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
+                    myViewHolder.coffee_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
                 }else if(item_fav_status != null && item_fav_status.equals("0")){
-                    myViewHolder.fruit_favBtn.setBackgroundResource(R.drawable.ic_baseline_star);
+                    myViewHolder.coffee_favBtn.setBackgroundResource(R.drawable.ic_baseline_star);
                 }
             }
         } finally {
