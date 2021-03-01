@@ -35,4 +35,5 @@ public class juiceContent extends AppCompatActivity {
         img.setImageResource(image);
 
     }
+
 }
