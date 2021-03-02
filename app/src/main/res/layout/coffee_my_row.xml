@@ -58,6 +58,22 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/coffee_image"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/coffee_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="308dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/coffee_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="205dp"
+                tools:layout_editor_absoluteY="83dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

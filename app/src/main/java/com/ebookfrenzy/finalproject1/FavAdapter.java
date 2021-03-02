@@ -42,6 +42,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
 
         holder.favImageView.setImageResource(juiceFavItem.getItem_image());
         holder.favTextView.setText(juiceFavItem.getItemTitle());
+        holder.favCategory.setText("");
+        holder.favCountry.setText("");
 
         holder.favCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +52,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
 
                 intent.putExtra("name", juiceFavItem.getItemTitle());
                 intent.putExtra("image", juiceFavItem.getItem_image());
-
+                intent.putExtra("category", juiceFavItem.getItem_category());
+                intent.putExtra("country", juiceFavItem.getItem_country());
 
                 context.startActivity(intent);
             }
@@ -66,7 +69,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
 
     public class  ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView favTextView;
+        TextView favTextView, favCategory, favCountry;
         Button favBtn;
         ImageView favImageView;
         CardView favCardView;
@@ -76,6 +79,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
             favTextView = itemView.findViewById(R.id.favTextView);
             favBtn = itemView.findViewById(R.id.favBtn);
             favImageView = itemView.findViewById(R.id.favImageView);
+            favCategory = itemView.findViewById(R.id.favCategory);
+            favCountry = itemView.findViewById(R.id.favCountry);
             favCardView = itemView.findViewById(R.id.fruit_cardView);
 
             favBtn.setOnClickListener(new View.OnClickListener(){

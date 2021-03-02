@@ -15,15 +15,16 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@android:color/holo_red_light"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="fixed"
-            app:tabGravity="fill"/>
+            android:background="@android:color/holo_blue_light"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

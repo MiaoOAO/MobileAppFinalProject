@@ -5,14 +5,18 @@ public class juiceFavItem {
     private String itemTitle;
     private String key_id;
     private int item_image;
+    private String item_category;
+    private String item_country;
 
     public juiceFavItem() {
     }
 
-    public juiceFavItem(String itemTitle, String key_id, int item_image) {
+    public juiceFavItem(String itemTitle, String key_id, int item_image, String item_category ,String item_country) {
         this.itemTitle = itemTitle;
         this.key_id = key_id;
         this.item_image = item_image;
+        this.item_category = item_category;
+        this.item_country = item_country;
     }
 
     public String getItemTitle() {
@@ -37,5 +41,21 @@ public class juiceFavItem {
 
     public void setItem_image(int item_image) {
         this.item_image = item_image;
+    }
+
+    public String getItem_category() {
+        return item_category;
+    }
+
+    public void setItem_category(String item_category) {
+        this.item_category = item_category;
+    }
+
+    public String getItem_country() {
+        return item_country;
+    }
+
+    public void setItem_country(String item_country) {
+        this.item_country = item_country;
     }
 }

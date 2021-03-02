@@ -9,6 +9,14 @@
         android:id="@+id/fruit_cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="4dp"
+        android:innerRadius="5dp"
+        android:shape="oval"
+        android:thicknessRatio="0.5"
+        app:cardBackgroundColor="#F3ECEC"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,15 +25,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/fruit_image"
-                android:layout_width="174dp"
-                android:layout_height="132dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/carrot"
-                android:contentDescription="TODO" />
 
             <!--
             <TextView
@@ -38,6 +37,16 @@
                 app:layout_constraintStart_toStartOf="@+id/fruit_listName_txt"
                 app:layout_constraintTop_toBottomOf="@+id/fruit_listName_txt" />
             -->
+
+            <ImageView
+                android:id="@+id/fruit_image"
+                android:layout_width="174dp"
+                android:layout_height="132dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/carrot" />
 
             <TextView
                 android:id="@+id/fruit_listName_txt"
@@ -55,9 +64,27 @@
                 android:id="@+id/fruit_favor"
                 android:layout_width="45dp"
                 android:layout_height="40dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
                 android:background="@drawable/ic_baseline_star"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/fruit_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="308dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/fruit_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="205dp"
+                tools:layout_editor_absoluteY="83dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

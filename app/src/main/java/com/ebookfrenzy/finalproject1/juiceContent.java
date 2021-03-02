@@ -1,16 +1,20 @@
 package com.ebookfrenzy.finalproject1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class juiceContent extends AppCompatActivity {
 
@@ -18,6 +22,9 @@ public class juiceContent extends AppCompatActivity {
     private ImageView img;
     private TextView category;
     private TextView country;
+    private juiceFavDB favDB;
+    private ArrayList<juiceItem> juiceItems;
+    private MyAdapterFruit adapterFruit;
 
 
     @Override
@@ -25,6 +32,16 @@ public class juiceContent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juice_content);
 
+
+        //final juiceItem juiceItem = juiceItems.get(1);
+
+        //Cursor cursor = favDB.read_all_data(juiceItem.getKey_id());
+        //SQLiteDatabase db = favDB.getReadableDatabase();
+        /*
+        adapterFruit.onBindViewHolder(@NonNull adapterFruit.MyViewHolder holder, int position){
+            final juiceItem juiceItem = juiceItems.get(position);
+        }
+*/
         name = (TextView) findViewById(R.id.juice_content_name);
         img = (ImageView) findViewById(R.id.juice_content_image);
         category = (TextView) findViewById(R.id.juice_content_category);
@@ -43,6 +60,7 @@ public class juiceContent extends AppCompatActivity {
         img.setImageResource(image);
         category.setText(j_category);
         country.setText(j_country);
+
 
     }
 

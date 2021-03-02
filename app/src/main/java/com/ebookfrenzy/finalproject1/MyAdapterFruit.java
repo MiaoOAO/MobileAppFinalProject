@@ -33,6 +33,7 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         favDB = new juiceFavDB(context);
+
         SharedPreferences prefs = context.getSharedPreferences("prefs", Context.MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if(firstStart){
@@ -46,12 +47,16 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final juiceItem juiceItem = juiceItems.get(position);
+        final juiceItem juiceItemPosition = juiceItems.get(position);
 
-        readCursorData(juiceItem, holder);
+        readCursorData(juiceItemPosition, holder);
 
-        holder.fruit_image.setImageResource(juiceItem.getImageResourse());
-        holder.fruit_listName_txt.setText(juiceItem.getTitle());
+        holder.fruit_image.setImageResource(juiceItemPosition.getImageResourse());
+        holder.fruit_listName_txt.setText(juiceItemPosition.getTitle());
+        holder.fruit_category.setText("");
+        holder.fruit_country.setText("");
+
+        //String test_category = juiceItem.getCategory();
         /*
         holder.fruit_listName_txt.setText(data1[position]);
         holder.fruit_listDesc_txt.setText(data2[position]);
@@ -62,8 +67,10 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
             public void onClick(View v) {
                 Intent intent = new Intent(context, juiceContent.class);
 
-                intent.putExtra("image",juiceItem.getImageResourse());
-                intent.putExtra("name", juiceItem.getTitle());
+                intent.putExtra("image",juiceItemPosition.getImageResourse());
+                intent.putExtra("name", juiceItemPosition.getTitle());
+                intent.putExtra("category", juiceItemPosition.getCategory());
+                intent.putExtra("country", juiceItemPosition.getCountry());
 
                 context.startActivity(intent);
             }
@@ -80,7 +87,7 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         //TextView fruit_listName_txt, fruit_listDesc_txt;
-        TextView fruit_listName_txt;
+        TextView fruit_listName_txt, fruit_category, fruit_country;
         ImageView fruit_image;
         CardView fruit_cardView;
         Button fruit_favBtn;
@@ -91,6 +98,8 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
             //fruit_listDesc_txt = itemView.findViewById(R.id.fruit_listDesc_txt);
             fruit_image = itemView.findViewById(R.id.fruit_image);
             fruit_cardView = itemView.findViewById(R.id.fruit_cardView);
+            fruit_category = itemView.findViewById(R.id.fruit_category);
+            fruit_country = itemView.findViewById(R.id.fruit_country);
             fruit_favBtn = itemView.findViewById(R.id.fruit_favor);
 
             fruit_favBtn.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +111,7 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
                     if(juiceItem.getFavStatus().equals("0")){
                         juiceItem.setFavStatus("1");
                         favDB.insertIntoTheDatabase(juiceItem.getTitle(), juiceItem.getImageResourse(),
-                                juiceItem.getKey_id(), juiceItem.getFavStatus());
+                                juiceItem.getKey_id(), juiceItem.getFavStatus(), juiceItem.getCategory(), juiceItem.getCountry());
                         fruit_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
                     }else{
                         juiceItem.setFavStatus("0");

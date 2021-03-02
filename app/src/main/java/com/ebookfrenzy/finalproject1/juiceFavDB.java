@@ -16,11 +16,13 @@ public class juiceFavDB extends SQLiteOpenHelper {
     public static String ITEM_TITLE = "itemTitle";
     public static String ITEM_IMAGE = "itemImage";
     public static String FAVORITE_STATUS = "fStatus";
+    public static String ITEM_CATEGORY = "itemCategory";
+    public static String ITEM_COUNTRY = "itemCountry";
     //private Context context;
 
     private static String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
             + KEY_ID + " TEXT," + ITEM_TITLE + " TEXT,"
-            + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS + " TEXT)";
+            + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS + " TEXT, " + ITEM_CATEGORY + " TEXT," + ITEM_COUNTRY + " TEXT)";
 
     public juiceFavDB(Context context){
         super(context, DATABASE_NAME, null,DB_VERSION);
@@ -52,7 +54,7 @@ public class juiceFavDB extends SQLiteOpenHelper {
     }
 
     //insert data into database
-    public void insertIntoTheDatabase(String item_title, int item_image, String id, String fav_status) {
+    public void insertIntoTheDatabase(String item_title, int item_image, String id, String fav_status, String item_category, String item_country) {
         SQLiteDatabase db;
         db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -60,6 +62,8 @@ public class juiceFavDB extends SQLiteOpenHelper {
         cv.put(ITEM_IMAGE, item_image);
         cv.put(KEY_ID, id);
         cv.put(FAVORITE_STATUS, fav_status);
+        cv.put(ITEM_CATEGORY, item_category);
+        cv.put(ITEM_COUNTRY, item_country);
         db.insert(TABLE_NAME, null, cv);
         Log.d("FavDB Status", item_title + ", favstatus - " + fav_status + " - , " + cv);
     }
