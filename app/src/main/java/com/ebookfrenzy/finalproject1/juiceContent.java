@@ -16,6 +16,9 @@ public class juiceContent extends AppCompatActivity {
 
     private TextView name;
     private ImageView img;
+    private TextView category;
+    private TextView country;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,15 +27,22 @@ public class juiceContent extends AppCompatActivity {
 
         name = (TextView) findViewById(R.id.juice_content_name);
         img = (ImageView) findViewById(R.id.juice_content_image);
+        category = (TextView) findViewById(R.id.juice_content_category);
+        country = (TextView) findViewById(R.id.juice_content_country);
 
         // Receive Data
         Intent intent = getIntent();
         String title = intent.getExtras().getString("name");
         int image = intent.getExtras().getInt("image");
+        String j_category = intent.getExtras().getString("category");
+        String j_country = intent.getExtras().getString("country");
+
 
         // Setting values
         name.setText(title);
         img.setImageResource(image);
+        category.setText(j_category);
+        country.setText(j_country);
 
     }
 

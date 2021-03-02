@@ -120,7 +120,7 @@
                             android:textColor="@color/colorPrimaryDark" />
 
                         <TextView
-                            android:id="@+id/category"
+                            android:id="@+id/juice_content_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="14dp"
@@ -156,7 +156,7 @@
                             android:textColor="@color/colorPrimaryDark" />
 
                         <TextView
-                            android:id="@+id/country"
+                            android:id="@+id/juice_content_country"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="14dp"

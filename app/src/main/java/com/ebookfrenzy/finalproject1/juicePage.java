@@ -43,9 +43,9 @@ public class juicePage extends AppCompatActivity{
         setContentView(R.layout.activity_juice_page);
 
         juiceItems = new ArrayList<>();
-        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0"));
-        juiceItems.add(new juiceItem(R.drawable.watermelon, "watermelon", "1", "0"));
-        juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0"));
+        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0","Health","Malaysia"));
+        juiceItems.add(new juiceItem(R.drawable.watermelon, "watermelon", "1", "0","Health","Japan"));
+        juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0","Health","Taiwan"));
 
         /*
         coffeeItems = new ArrayList<>();
