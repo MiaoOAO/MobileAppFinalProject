@@ -10,7 +10,7 @@ import android.util.Log;
 public class coffeeFavDB extends SQLiteOpenHelper {
 
     private static int DB_VERSION = 1;
-    private static String DATABASE_NAME = "coffeeDB";
+    private static String DATABASE_NAME = "juiceDB";
     private static String TABLE_NAME = "favoriteTable";
     public static String KEY_ID = "id";
     public static String ITEM_TITLE = "itemTitle";

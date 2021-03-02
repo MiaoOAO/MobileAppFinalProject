@@ -43,7 +43,7 @@ public class coffeePage extends AppCompatActivity {
         }
 */
         if(Tab1Fragment.click2 == true) {
-            recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+            recyclerView = (RecyclerView) findViewById(R.id.recyclerView2);
             MyAdapterCoffee adapterCoffee = new MyAdapterCoffee(this, coffeeItems);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(adapterCoffee);

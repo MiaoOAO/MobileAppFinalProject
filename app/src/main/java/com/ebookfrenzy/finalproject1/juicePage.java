@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -15,15 +16,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class juicePage extends AppCompatActivity {
+public class juicePage extends AppCompatActivity{
 
     RecyclerView recyclerView;
     private ArrayList<juiceItem> juiceItems;
-    private ArrayList<juiceItem> coffeeItems;
+    //private ArrayList<juiceItem> coffeeItems;
+
+
+    private static String TABLE_NAME = "favoriteTable";
+    public static String FAVORITE_STATUS = "fStatus";
 
     //int images[] = {R.drawable.apple, R.drawable.watermelon, R.drawable.carrot, R.drawable.mango};
 
@@ -34,10 +43,11 @@ public class juicePage extends AppCompatActivity {
         setContentView(R.layout.activity_juice_page);
 
         juiceItems = new ArrayList<>();
-        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0"));
-        juiceItems.add(new juiceItem(R.drawable.watermelon, "watermelon", "1", "0"));
-        juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0"));
+        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0","Health","Malaysia"));
+        juiceItems.add(new juiceItem(R.drawable.watermelon, "watermelon", "1", "0","Health","Japan"));
+        juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0","Health","Taiwan"));
 
+        /*
         coffeeItems = new ArrayList<>();
         coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "3", "1"));
         coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "4", "1"));
@@ -45,7 +55,7 @@ public class juicePage extends AppCompatActivity {
         //coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "6", "1"));
         //coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "6", "1"));
         //coffeeItems.add(new juiceItem(R.drawable.cappuccino, "cappuccino", "6", "1"));
-
+*/
 
 
 
@@ -57,7 +67,7 @@ public class juicePage extends AppCompatActivity {
             recyclerView.setAdapter(adapterFruit);
 
         }
-
+/*
         if(Tab1Fragment.click2 == true) {
             recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
@@ -66,7 +76,7 @@ public class juicePage extends AppCompatActivity {
             recyclerView.setAdapter(adapterFruit);
 
         }
-
+*/
 
 
 
@@ -87,11 +97,16 @@ public class juicePage extends AppCompatActivity {
         recyclerView.setAdapter(adapterFruit);
 */
 
+
         for(int i=0; i<juiceItems.size(); i++)
         {
             Log.d(TAG, "onCreate: title: " + juiceItems.get(i).getTitle() + "key_id: " + juiceItems.get(i).getKey_id() + juiceItems.get(i).getImageResourse());
-            Log.d(TAG, "onCreate: title: " + coffeeItems.get(i).getTitle() + "key_id: " + coffeeItems.get(i).getKey_id() + coffeeItems.get(i).getImageResourse());
+            //Log.d(TAG, "onCreate: title: " + coffeeItems.get(i).getTitle() + "key_id: " + coffeeItems.get(i).getKey_id() + coffeeItems.get(i).getImageResourse());
+
         }
+
+
+
 
 
         /*
