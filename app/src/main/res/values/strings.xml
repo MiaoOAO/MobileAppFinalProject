@@ -47,4 +47,10 @@
     <string name="favorite">Favorite</string>
     <string name="juiceText">Healthy fruit juice recipes with step by step instructions. It contains great selections of juice recipes that will surely satisfy your palate with flavourful ingredients. These recipes are quick to prepare!</string>
     <string name="coffeeText">It brings you a great selection of delicious coffee and tea recipes. Just a simply tap on the photo, you will surely find here a coffee and tea recipe that will suit your taste. Make your own favourite coffee or tea now!</string>
+    <string name="about">About</string>
+    <string name="fruit_juice_recipes">Fruit Juice Recipes</string>
+    <string name="coffee_and_tea_recipes">Coffee And Tea Recipes</string>
+    <string name="videos_you_might_like">Videos You Might Like...</string>
+    <string name="home_cooking_lifestyle_healthy_apple_juice">Home Cooking Lifestyle | Healthy Apple Juice</string>
+    <string name="enhance_recipe_tea_recipe_with_coffee">ENHANCE RECIPE | Tea recipe with coffee</string>
 </resources>

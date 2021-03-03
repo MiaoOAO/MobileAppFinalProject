@@ -8,6 +8,9 @@
     android:layout_width="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/frameLayout3"
         android:layout_width="match_parent"
         android:layout_height="729dp"
@@ -22,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="cursive"
-            android:text="About"
+            android:text="@string/about"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="22pt"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,28 +33,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <com.yinglan.shadowimageview.ShadowImageView
             android:id="@+id/juiceImage"
-            android:layout_width="271dp"
+            android:layout_width="300dp"
             android:layout_height="179dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/juice"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/aboutTextView"
-            app:shapeAppearanceOverlay="@style/roundedImageView" />
+            app:shadowColor="@color/colorPrimaryText"
+            app:shadowRound="20dp"
+            app:shadowSrc="@drawable/juice" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Fruit Juice Recipes"
+            android:text="@string/fruit_juice_recipes"
             android:textColor="@color/colorPrimaryText"
             android:textSize="12pt"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="79dp"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-condensed"
             android:text="@string/juiceText"
             android:textSize="7pt"
@@ -73,28 +74,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <com.yinglan.shadowimageview.ShadowImageView
             android:id="@+id/coffeeImage"
-            android:layout_width="267dp"
-            android:layout_height="152dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="300dp"
+            android:layout_height="179dp"
             android:layout_marginTop="40dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/coffeetea"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:shapeAppearanceOverlay="@style/roundedImageView" />
+            app:shadowColor="@color/colorPrimaryText"
+            app:shadowRound="20dp"
+            app:shadowSrc="@drawable/coffeetea" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Coffee And Tea Recipes"
+            android:text="@string/coffee_and_tea_recipes"
             android:textColor="@color/colorPrimaryText"
             android:textSize="12pt"
             app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +106,7 @@
             android:layout_width="0dp"
             android:layout_height="77dp"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-condensed"
             android:text="@string/coffeeText"
             android:textSize="7pt"
@@ -121,15 +120,66 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="80dp"
             android:fontFamily="serif"
-            android:text="Videos You Might Like..."
+            android:text="@string/videos_you_might_like"
             android:textColor="@color/colorPrimaryText"
-            android:textSize="8pt"
+            android:textSize="9pt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.008"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtubeVideo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            app:videoId="bGfJILzw6Mc" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/home_cooking_lifestyle_healthy_apple_juice"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="8pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtubeVideo1" />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtubeVideo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:layout_constraintVertical_bias="0.0"
+            app:videoId="njSNS734Z4Y" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/enhance_recipe_tea_recipe_with_coffee"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="8pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtubeVideo2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
