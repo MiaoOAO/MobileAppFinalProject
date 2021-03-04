@@ -43,7 +43,15 @@ public class juicePage extends AppCompatActivity{
         setContentView(R.layout.activity_juice_page);
 
         juiceItems = new ArrayList<>();
-        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0","Health","Malaysia","e","",""));
+        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0","Health","Malaysia","1.  " +
+                "Start by washing and then coring the apple to remove seeds. Cut the apples into slices. There is no need to peel the apples.\n\n" +
+                "2.  " +
+                "Add the apples to the pot and add enough water to just cover them. Too much water and you’ll have pretty diluted juice. This juice may come out a bit strong, but it’s a lot easier to dilute the juice with extra water rather than trying to make the flavor stronger.\n\n" +
+                "3.  " +
+                "Slowly boil the apples for about 20-25 minutes or until the apples are quite soft. Place a coffee filter or piece of cheesecloth in your fine mesh strainer and place over a bowl.\n\n"
+                ,"Apples\n" +
+                "Cinnamon (optional)\n" +
+                "Sugar (optional)","5 pieces \n30g \n50g"));
         juiceItems.add(new juiceItem(R.drawable.watermelon, "watermelon", "1", "0","Health","Japan","","",""));
         juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0","Health","Taiwan","","",""));
 

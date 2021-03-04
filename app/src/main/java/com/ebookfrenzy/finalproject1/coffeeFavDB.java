@@ -25,7 +25,7 @@ public class coffeeFavDB extends SQLiteOpenHelper {
 
     private static String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
             + KEY_ID + " TEXT," + ITEM_TITLE + " TEXT,"
-            + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS + " TEXT, " + ITEM_CATEGORY + " TEXT," + ITEM_COUNTRY + " TEXT" + ITEM_INSTRUCTION + " TEXT," + ITEM_INGREDIENT
+            + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS + " TEXT, " + ITEM_CATEGORY + " TEXT," + ITEM_COUNTRY + " TEXT," + ITEM_INSTRUCTION + " TEXT," + ITEM_INGREDIENT
             + " TEXT, " + ITEM_MEASURE + " TEXT)";
 
     public coffeeFavDB(Context context){

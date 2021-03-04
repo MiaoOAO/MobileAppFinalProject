@@ -107,9 +107,9 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
             fruit_cardView = itemView.findViewById(R.id.fruit_cardView);
             fruit_category = itemView.findViewById(R.id.fruit_category);
             fruit_country = itemView.findViewById(R.id.fruit_country);
-            //fruit_instructions = itemView.findViewById(R.id.fruit_instructions);
-            //fruit_ingredient = itemView.findViewById(R.id.fruit_ingredient);
-            //fruit_measure = itemView.findViewById(R.id.fruit_measure);
+            fruit_instructions = itemView.findViewById(R.id.fruit_instructions);
+            fruit_ingredient = itemView.findViewById(R.id.fruit_ingredient);
+            fruit_measure = itemView.findViewById(R.id.fruit_measure);
             fruit_favBtn = itemView.findViewById(R.id.fruit_favor);
 
             fruit_favBtn.setOnClickListener(new View.OnClickListener() {

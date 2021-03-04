@@ -103,9 +103,9 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
             coffee_cardView = itemView.findViewById(R.id.coffee_cardView);
             coffee_category = itemView.findViewById(R.id.coffee_category);
             coffee_country = itemView.findViewById(R.id.coffee_country);
-            //coffee_instructions = itemView.findViewById(R.id.coffee_instructions);
-            //coffee_ingredient = itemView.findViewById(R.id.ingredient);
-            //coffee_measure = itemView.findViewById(R.id.measure);
+            coffee_instructions = itemView.findViewById(R.id.coffee_instrunctions);
+            coffee_ingredient = itemView.findViewById(R.id.coffee_ingredient);
+            coffee_measure = itemView.findViewById(R.id.coffee_measure);
             coffee_favBtn = itemView.findViewById(R.id.coffee_favor);
 
 

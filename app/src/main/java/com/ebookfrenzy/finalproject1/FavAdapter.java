@@ -44,6 +44,9 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
         holder.favTextView.setText(juiceFavItem.getItemTitle());
         holder.favCategory.setText("");
         holder.favCountry.setText("");
+        holder.favInstructions.setText("");
+        holder.favIngredient.setText("");
+        holder.favMeasure.setText("");
 
 
         holder.favCardView.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +58,9 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
                 intent.putExtra("image", juiceFavItem.getItem_image());
                 intent.putExtra("category", juiceFavItem.getItem_category());
                 intent.putExtra("country", juiceFavItem.getItem_country());
+                intent.putExtra("instructions", juiceFavItem.getItem_instructions());
+                intent.putExtra("ingredient", juiceFavItem.getItem_ingredient());
+                intent.putExtra("measure", juiceFavItem.getItem_measure());
 
                 context.startActivity(intent);
             }
@@ -70,7 +76,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
 
     public class  ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView favTextView, favCategory, favCountry;
+        TextView favTextView, favCategory, favCountry, favInstructions, favIngredient, favMeasure;
         Button favBtn;
         ImageView favImageView;
         CardView favCardView;
@@ -82,7 +88,9 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
             favImageView = itemView.findViewById(R.id.favImageView);
             favCategory = itemView.findViewById(R.id.favCategory);
             favCountry = itemView.findViewById(R.id.favCountry);
-
+            favInstructions = itemView.findViewById(R.id.favInstructions);
+            favIngredient = itemView.findViewById(R.id.favIngredient);
+            favMeasure = itemView.findViewById(R.id.favMeasure);
             favCardView = itemView.findViewById(R.id.fruit_cardView);
 
             favBtn.setOnClickListener(new View.OnClickListener(){
