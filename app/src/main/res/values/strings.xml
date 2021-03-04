@@ -53,4 +53,5 @@
     <string name="videos_you_might_like">Videos You Might Like...</string>
     <string name="home_cooking_lifestyle_healthy_apple_juice">Home Cooking Lifestyle | Healthy Apple Juice</string>
     <string name="enhance_recipe_tea_recipe_with_coffee">ENHANCE RECIPE | Tea recipe with coffee</string>
+    <string name="textview">TextView</string>
 </resources>

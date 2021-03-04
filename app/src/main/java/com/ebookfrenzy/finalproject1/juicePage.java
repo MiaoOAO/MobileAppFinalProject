@@ -43,7 +43,7 @@ public class juicePage extends AppCompatActivity{
         setContentView(R.layout.activity_juice_page);
 
         juiceItems = new ArrayList<>();
-        juiceItems.add(new juiceItem(R.drawable.apple, "apple", "0", "0","Health","Malaysia","1.  " +
+        juiceItems.add(new juiceItem(R.drawable.apple, "Apple Juice", "0", "0","Health","Malaysia","1.  " +
                 "Start by washing and then coring the apple to remove seeds. Cut the apples into slices. There is no need to peel the apples.\n\n" +
                 "2.  " +
                 "Add the apples to the pot and add enough water to just cover them. Too much water and you’ll have pretty diluted juice. This juice may come out a bit strong, but it’s a lot easier to dilute the juice with extra water rather than trying to make the flavor stronger.\n\n" +
@@ -54,6 +54,8 @@ public class juicePage extends AppCompatActivity{
                 "Sugar (optional)","5 pieces \n30g \n50g"));
         juiceItems.add(new juiceItem(R.drawable.watermelon, "watermelon", "1", "0","Health","Japan","","",""));
         juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0","Health","Taiwan","","",""));
+
+        juiceItems.add(new juiceItem(R.drawable.carrot, "KALE JUICE", "2", "0","Health","Taiwan","","",""));
 
         /*
         coffeeItems = new ArrayList<>();
