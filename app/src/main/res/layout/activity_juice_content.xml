@@ -194,7 +194,7 @@
                 app:cardUseCompatPadding="true">
 
                 <TextView
-                    android:id="@+id/instructions"
+                    android:id="@+id/juice_content_instructions"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="14dp"
@@ -242,7 +242,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/ingredient"
+                                android:id="@+id/juice_content_ingredient"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="14dp"
@@ -258,7 +258,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/measure"
+                                android:id="@+id/juice_content_measure"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="14dp"

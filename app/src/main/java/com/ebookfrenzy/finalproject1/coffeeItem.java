@@ -8,17 +8,23 @@ public class coffeeItem {
     private String favStatus;
     private String category;
     private String country;
+    private String instructions;
+    private String ingredient;
+    private String measure;
 
     public coffeeItem(){
     }
 
-    public coffeeItem(int imageResourse, String title, String key_id, String favStatus ,String category,String country) {
+    public coffeeItem(int imageResourse, String title, String key_id, String favStatus ,String category,String country,String instructions,String ingredient,String measure) {
         this.imageResourse = imageResourse;
         this.title = title;
         this.key_id = key_id;
         this.favStatus = favStatus;
         this.category = category;
         this.country = country;
+        this.instructions = instructions;
+        this.ingredient = ingredient;
+        this.measure = measure;
     }
 
     public int getImageResourse() {
@@ -63,5 +69,23 @@ public class coffeeItem {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getInstructions() { return instructions; }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
+
+    public String getIngredient() { return ingredient; }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
+    }
+
+    public String getMeasure() { return measure; }
+
+    public void setMeasure(String measure) {
+        this.measure = measure;
     }
 }

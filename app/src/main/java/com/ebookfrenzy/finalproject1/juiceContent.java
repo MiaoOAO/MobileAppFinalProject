@@ -22,6 +22,9 @@ public class juiceContent extends AppCompatActivity {
     private ImageView img;
     private TextView category;
     private TextView country;
+    private TextView instructions;
+    private TextView ingredient;
+    private TextView measure;
     private juiceFavDB favDB;
     private ArrayList<juiceItem> juiceItems;
     private MyAdapterFruit adapterFruit;
@@ -46,6 +49,9 @@ public class juiceContent extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.juice_content_image);
         category = (TextView) findViewById(R.id.juice_content_category);
         country = (TextView) findViewById(R.id.juice_content_country);
+        instructions = (TextView) findViewById(R.id.juice_content_instructions);
+        ingredient = (TextView) findViewById(R.id.juice_content_ingredient);
+        measure = (TextView) findViewById(R.id.juice_content_measure);
 
         // Receive Data
         Intent intent = getIntent();
@@ -53,6 +59,9 @@ public class juiceContent extends AppCompatActivity {
         int image = intent.getExtras().getInt("image");
         String j_category = intent.getExtras().getString("category");
         String j_country = intent.getExtras().getString("country");
+        String j_instructions = intent.getExtras().getString("instructions");
+        String j_ingredient = intent.getExtras().getString("ingredient");
+        String j_measure = intent.getExtras().getString("measure");
 
 
         // Setting values
@@ -60,6 +69,9 @@ public class juiceContent extends AppCompatActivity {
         img.setImageResource(image);
         category.setText(j_category);
         country.setText(j_country);
+        instructions.setText(j_instructions);
+        ingredient.setText(j_ingredient);
+        measure.setText(j_measure);
 
 
     }

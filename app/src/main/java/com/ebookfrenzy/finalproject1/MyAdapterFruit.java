@@ -55,6 +55,9 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
         holder.fruit_listName_txt.setText(juiceItemPosition.getTitle());
         holder.fruit_category.setText("");
         holder.fruit_country.setText("");
+        holder.fruit_instructions.setText("");
+        holder.fruit_ingredient.setText("");
+        holder.fruit_measure.setText("");
 
         //String test_category = juiceItem.getCategory();
         /*
@@ -71,6 +74,10 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
                 intent.putExtra("name", juiceItemPosition.getTitle());
                 intent.putExtra("category", juiceItemPosition.getCategory());
                 intent.putExtra("country", juiceItemPosition.getCountry());
+                intent.putExtra("instructions", juiceItemPosition.getInstructions());
+                intent.putExtra("ingredient", juiceItemPosition.getIngredient());
+                intent.putExtra("measure", juiceItemPosition.getMeasure());
+
 
                 context.startActivity(intent);
             }
@@ -87,7 +94,7 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         //TextView fruit_listName_txt, fruit_listDesc_txt;
-        TextView fruit_listName_txt, fruit_category, fruit_country;
+        TextView fruit_listName_txt, fruit_category, fruit_country,fruit_instructions,fruit_ingredient,fruit_measure;
         ImageView fruit_image;
         CardView fruit_cardView;
         Button fruit_favBtn;
@@ -100,6 +107,9 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
             fruit_cardView = itemView.findViewById(R.id.fruit_cardView);
             fruit_category = itemView.findViewById(R.id.fruit_category);
             fruit_country = itemView.findViewById(R.id.fruit_country);
+            //fruit_instructions = itemView.findViewById(R.id.fruit_instructions);
+            //fruit_ingredient = itemView.findViewById(R.id.fruit_ingredient);
+            //fruit_measure = itemView.findViewById(R.id.fruit_measure);
             fruit_favBtn = itemView.findViewById(R.id.fruit_favor);
 
             fruit_favBtn.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +121,7 @@ public class MyAdapterFruit extends RecyclerView.Adapter<MyAdapterFruit.MyViewHo
                     if(juiceItem.getFavStatus().equals("0")){
                         juiceItem.setFavStatus("1");
                         favDB.insertIntoTheDatabase(juiceItem.getTitle(), juiceItem.getImageResourse(),
-                                juiceItem.getKey_id(), juiceItem.getFavStatus(), juiceItem.getCategory(), juiceItem.getCountry());
+                                juiceItem.getKey_id(), juiceItem.getFavStatus(), juiceItem.getCategory(), juiceItem.getCountry(),juiceItem.getInstructions(),juiceItem.getIngredient(),juiceItem.getMeasure());
                         fruit_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
                     }else{
                         juiceItem.setFavStatus("0");

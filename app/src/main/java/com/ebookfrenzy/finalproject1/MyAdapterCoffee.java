@@ -54,6 +54,9 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
         holder.coffee_listName_txt.setText(coffeeItem.getTitle());
         holder.coffee_category.setText("");
         holder.coffee_country.setText("");
+        holder.coffee_instructions.setText("");
+        holder.coffee_ingredient.setText("");
+        holder.coffee_measure.setText("");
         /*
         holder.fruit_listName_txt.setText(data1[position]);
         holder.fruit_listDesc_txt.setText(data2[position]);
@@ -68,6 +71,9 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
                 intent.putExtra("name", coffeeItem.getTitle());
                 intent.putExtra("category", coffeeItem.getCategory());
                 intent.putExtra("country", coffeeItem.getCountry());
+                intent.putExtra("instructions", coffeeItem.getInstructions());
+                intent.putExtra("ingredient", coffeeItem.getIngredient());
+                intent.putExtra("measure", coffeeItem.getMeasure());
 
                 context.startActivity(intent);
             }
@@ -84,7 +90,7 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         //TextView fruit_listName_txt, fruit_listDesc_txt;
-        TextView coffee_listName_txt, coffee_category, coffee_country;
+        TextView coffee_listName_txt, coffee_category, coffee_country, coffee_instructions, coffee_ingredient, coffee_measure ;
         ImageView coffee_image;
         CardView coffee_cardView;
         Button coffee_favBtn;
@@ -97,6 +103,9 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
             coffee_cardView = itemView.findViewById(R.id.coffee_cardView);
             coffee_category = itemView.findViewById(R.id.coffee_category);
             coffee_country = itemView.findViewById(R.id.coffee_country);
+            //coffee_instructions = itemView.findViewById(R.id.coffee_instructions);
+            //coffee_ingredient = itemView.findViewById(R.id.ingredient);
+            //coffee_measure = itemView.findViewById(R.id.measure);
             coffee_favBtn = itemView.findViewById(R.id.coffee_favor);
 
 
@@ -109,7 +118,7 @@ public class MyAdapterCoffee extends RecyclerView.Adapter<MyAdapterCoffee.MyView
                     if(coffeeItem.getFavStatus().equals("0")){
                         coffeeItem.setFavStatus("1");
                         favDB.insertIntoTheDatabase(coffeeItem.getTitle(), coffeeItem.getImageResourse(),
-                                coffeeItem.getKey_id(), coffeeItem.getFavStatus(), coffeeItem.getCategory(), coffeeItem.getCountry());
+                                coffeeItem.getKey_id(), coffeeItem.getFavStatus(), coffeeItem.getCategory(), coffeeItem.getCountry(), coffeeItem.getInstructions(), coffeeItem.getIngredient(), coffeeItem.getMeasure());
                         coffee_favBtn.setBackgroundResource(R.drawable.ic_baseline_star_24);
                     }else{
                         coffeeItem.setFavStatus("0");

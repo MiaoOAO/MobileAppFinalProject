@@ -30,9 +30,9 @@ public class coffeePage extends AppCompatActivity {
         juiceItems.add(new juiceItem(R.drawable.carrot, "carrot", "2", "0"));
 */
         coffeeItems = new ArrayList<>();
-        coffeeItems.add(new coffeeItem(R.drawable.cappuccino, "cappuccino", "3", "1", "Coffee", "Malaysia"));
-        coffeeItems.add(new coffeeItem(R.drawable.latte, "latte", "4", "1", "Coffee", "Japan"));
-        coffeeItems.add(new coffeeItem(R.drawable.cappuccino, "cappuccino", "5", "1", "Health", "Taiwan"));
+        coffeeItems.add(new coffeeItem(R.drawable.cappuccino, "cappuccino", "3", "1", "Coffee", "Malaysia","","",""));
+        coffeeItems.add(new coffeeItem(R.drawable.latte, "latte", "4", "1", "Coffee", "Japan","","",""));
+        coffeeItems.add(new coffeeItem(R.drawable.cappuccino, "cappuccino", "5", "1", "Health", "Taiwan","","",""));
 
 /*
         if(Tab1Fragment.click1 == true) {

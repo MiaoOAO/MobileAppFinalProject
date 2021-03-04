@@ -104,7 +104,10 @@ public class Tab2Fragment extends Fragment{
                 int image = Integer.parseInt(cursor.getString(cursor.getColumnIndex(juiceFavDB.ITEM_IMAGE)));
                 String category = cursor.getString(cursor.getColumnIndex(juiceFavDB.ITEM_CATEGORY));
                 String country = cursor.getString(cursor.getColumnIndex(juiceFavDB.ITEM_COUNTRY));
-                juiceFavItem favItem = new juiceFavItem(title, id, image, category, country);
+                String instructions = cursor.getString(cursor.getColumnIndex(juiceFavDB.ITEM_INSTRUCTION));
+                String ingredient = cursor.getString(cursor.getColumnIndex(juiceFavDB.ITEM_INGREDIENT));
+                String measure = cursor.getString(cursor.getColumnIndex(juiceFavDB.ITEM_MEASURE));
+                juiceFavItem favItem = new juiceFavItem(title, id, image, category, country,instructions,ingredient,measure);
                 favItemList.add(favItem);
             }
         } finally {

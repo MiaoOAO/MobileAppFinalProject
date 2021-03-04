@@ -18,11 +18,15 @@ public class coffeeFavDB extends SQLiteOpenHelper {
     public static String FAVORITE_STATUS = "fStatus";
     public static String ITEM_CATEGORY = "itemCategory";
     public static String ITEM_COUNTRY = "itemCountry";
+    public static String ITEM_INSTRUCTION = "itemInstructions";
+    public static String ITEM_INGREDIENT = "itemIngredient";
+    public static String ITEM_MEASURE = "itemMeasure";
     //private Context context;
 
     private static String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
             + KEY_ID + " TEXT," + ITEM_TITLE + " TEXT,"
-            + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS + " TEXT, " + ITEM_CATEGORY + " TEXT," + ITEM_COUNTRY + " TEXT)";
+            + ITEM_IMAGE + " TEXT," + FAVORITE_STATUS + " TEXT, " + ITEM_CATEGORY + " TEXT," + ITEM_COUNTRY + " TEXT" + ITEM_INSTRUCTION + " TEXT," + ITEM_INGREDIENT
+            + " TEXT, " + ITEM_MEASURE + " TEXT)";
 
     public coffeeFavDB(Context context){
         super(context, DATABASE_NAME, null,DB_VERSION);
@@ -54,7 +58,7 @@ public class coffeeFavDB extends SQLiteOpenHelper {
     }
 
     //insert data into database
-    public void insertIntoTheDatabase(String item_title, int item_image, String id, String fav_status, String item_category, String item_country) {
+    public void insertIntoTheDatabase(String item_title, int item_image, String id, String fav_status, String item_category, String item_country, String item_instructions, String item_ingredient, String item_measure) {
         SQLiteDatabase db;
         db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -64,6 +68,9 @@ public class coffeeFavDB extends SQLiteOpenHelper {
         cv.put(FAVORITE_STATUS, fav_status);
         cv.put(ITEM_CATEGORY, item_category);
         cv.put(ITEM_COUNTRY, item_country);
+        cv.put(ITEM_INSTRUCTION,item_instructions);
+        cv.put(ITEM_INGREDIENT,item_ingredient);
+        cv.put(ITEM_MEASURE,item_measure);
         db.insert(TABLE_NAME, null, cv);
         Log.d("FavDB Status", item_title + ", favstatus - " + fav_status + " - , " + cv);
     }

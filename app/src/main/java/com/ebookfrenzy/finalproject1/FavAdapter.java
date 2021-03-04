@@ -45,6 +45,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
         holder.favCategory.setText("");
         holder.favCountry.setText("");
 
+
         holder.favCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +82,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
             favImageView = itemView.findViewById(R.id.favImageView);
             favCategory = itemView.findViewById(R.id.favCategory);
             favCountry = itemView.findViewById(R.id.favCountry);
+
             favCardView = itemView.findViewById(R.id.fruit_cardView);
 
             favBtn.setOnClickListener(new View.OnClickListener(){
