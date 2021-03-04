@@ -81,13 +81,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ProgressBar
+           <!-- <ProgressBar
                 android:id="@+id/progressBar"
                 style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-7dp"
-                android:indeterminate="true" />
+                android:indeterminate="true" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
