@@ -1,60 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tab1Fragment">
+    android:layout_width="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="316dp"
-        android:src="@drawable/juice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Tab1Fragment">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="293dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/juice"
-        android:textAlignment="center"
-        android:textColor="#F6FAF9"
-        android:textColorHighlight="#852727"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:src="@drawable/juice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="419dp"
-        android:layout_height="316dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/coffeetea"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="293dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/juice"
+            android:textAlignment="center"
+            android:textColor="#F6FAF9"
+            android:textColorHighlight="#852727"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="293dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/coffee_tea"
-        android:textAlignment="center"
-        android:textColor="#F6FAF9"
-        android:textColorHighlight="#852727"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="match_parent"
+            android:layout_height="357dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/coffeetea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="293dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/coffee_tea"
+            android:textAlignment="center"
+            android:textColor="#F6FAF9"
+            android:textColorHighlight="#852727"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
